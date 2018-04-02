@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of obj, let i = index" (click)="onClick(i)">
+        <p class="list-group-item list-group-item-primary" id="question_{{i}}">{{item.question}}</p>
+        <p class="list-group-item list-group-item-warning" id="answer_{{i}}" [@paragraphState]='displayStates[i]'>{{item.anwser}}</p>
+    </li>
+</ul>
